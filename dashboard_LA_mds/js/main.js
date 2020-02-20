@@ -12,7 +12,7 @@ function myTimer()
         if(xhr_bird_LA.status===200) 
         {
             var bird_string = JSON.parse(xhr_bird_LA.responseText);
-            console.log(bird_string);
+            //console.log(bird_string);
             document.getElementById("bird_LA_qty").innerHTML = bird_string.data.bikes.length;
         }
     }
@@ -28,7 +28,7 @@ function myTimer()
         if(xhr_spin_LA.status===200) 
         {
             var spin_string = JSON.parse(xhr_spin_LA.responseText);
-            console.log(spin_string);
+            //console.log(spin_string);
             document.getElementById("spin_LA_qty").innerHTML = spin_string.data.bikes.length;
         }
     }
