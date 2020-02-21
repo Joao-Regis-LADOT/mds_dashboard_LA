@@ -1,3 +1,5 @@
+myTimer();
+
 var myVar = setInterval(myTimer, 5000);
 
 function myTimer() 
@@ -32,6 +34,23 @@ function myTimer()
             document.getElementById("spin_LA_qty").innerHTML = spin_string.data.bikes.length;
         }
     }
+
+
+    var xhr_lime_LA = new XMLHttpRequest();
+    xhr_lime_LA.responseType = 'text';
+    xhr_lime_LA.open('GET', 'https://data.lime.bike/api/partners/v1/gbfs/los_angeles/free_bike_status', true );
+    xhr_lime_LA.send();
+
+    xhr_lime_LA.onload = function() 
+    {
+        if(xhr_lime_LA.status===200) 
+        {
+            var lime_string = JSON.parse(xhr_lime_LA.responseText);
+            //console.log(lime_string);
+            document.getElementById("lime_LA_qty").innerHTML = lime_string.data.bikes.length;
+        }
+    }
+    
 
     
 
