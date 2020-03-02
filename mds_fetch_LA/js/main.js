@@ -28,5 +28,5 @@ async function get_lime_qty()
     document.getElementById("lime_LA_qty").innerHTML = data_lime.data.bikes.length;
 }
 
-get_lime_qty(get_lime_qty);
+get_lime_qty();
 setInterval(get_lime_qty, 5000)
