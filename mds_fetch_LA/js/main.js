@@ -12,7 +12,7 @@ async function get_BirdLA_qty()
 }
 
 get_BirdLA_qty();
-setInterval(get_BirdLA_qty, 5000)
+setInterval(get_BirdLA_qty, 20000)
 
 
 
@@ -29,4 +29,4 @@ async function get_lime_qty()
 }
 
 get_lime_qty();
-setInterval(get_lime_qty, 5000)
+setInterval(get_lime_qty, 20000)
