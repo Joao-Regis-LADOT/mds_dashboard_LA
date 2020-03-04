@@ -69,6 +69,7 @@ async function provider_apis()
 
     var hundredPerct = birdLA_avl + lime_avl + spin_avl + uber_jump_S_avl + uber_jump_B_avl + lyft_avl + wheels_avl;
     console.log("100% of fleet = " + hundredPerct);
+    document.getElementById("total_devices").innerHTML = hundredPerct;
     
     
     var ctx = document.getElementById('bar_chart').getContext('2d');
