@@ -5,32 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>Coding Train: Data/APIs 1</title>
+    <title>MDS LA - LADOT BSG</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
   </head>
 
   <body>
     <h1> MDS Dashboard - <span>LIVE</span></h1>
 
-    <p>Bird: <span id="bird_LA_qty"></span> </p>
-    <!-- https://mds.bird.co/gbfs/santamonica/free_bikes -->
+    
 
+    <table id="table1">
+      
+      <tr>
+        <th>Provider</th>
+        <th>Devices Available</th>
+      </tr>
+
+      <tr>
+        <td>Bird</td>
+        <td id="bird_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Lime</td>
+        <td id="lime_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Spin</td>
+        <td id="spin_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Uber / Jump / LAX S</td>
+        <td id="uber_jump_S_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Uber / Jump / LAX B</td>
+        <td id="uber_jump_B_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Lyft</td>
+        <td id="lyft_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+      <tr>
+        <td>Wheels</td>
+        <td id="wheels_LA_qty_tbl" style="color:red"></td>
+      </tr>
+
+    </table>
+
+      
+    <!-- <p>Bird: <span id="bird_LA_qty"></span> </p>
     <p>Lime: <span id="lime_LA_qty"></span> </p>
-    <!-- https://data.lime.bike/api/partners/v1/gbfs/los_angeles/free_bike_status -->
-
     <p>Spin: <span id="spin_LA_qty"></span> </p>
-    <!-- https://web.spin.pm/api/gbfs/v1/los_angeles/free_bike_status.json -->
-
-    <p>Uber / Jump / LAX S: <span id="uber_LAX_S_qty"></span> </p>
-    <!-- https://gbfs.uber.com/v1/laxs/free_bike_status.json -->
-
-    <p>Uber / Jump / LAX B: <span id="uber_LAX_B_qty"></span> </p>
-    <!-- https://gbfs.uber.com/v1/laxb/free_bike_status.json -->
-
+    <p>Uber / Jump / LAX S: <span id="uber_jump_S_LA_qty"></span> </p>
+    <p>Uber / Jump / LAX B: <span id="uber_jump_B_LA_qty"></span> </p>
     <p>Lyft: <span id="lyft_LA_qty"></span> </p>
-    <!-- https://s3.amazonaws.com/lyft-lastmile-production-iad/lbs/lax/free_bike_status.json -->
+    <p>Wheels: <span id="wheels_LA_qty"></span> </p> -->
+      
+    
 
-    <p>Wheels: <span id="wheels_LA_qty"></span> </p>
-    <!-- https://la-gbfs.getwheelsapp.com/free_bike_status.json -->
+    <canvas id="bar_chart" width="200" height="200"></canvas>
+    <p></p>
+    <p></p>
+    <canvas id="pie_chart" width="200" height="200"></canvas>
+
   </body>
   <script type="text/javascript" src="js/main.js"></script>
 </html>
